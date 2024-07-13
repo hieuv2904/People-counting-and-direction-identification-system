@@ -1,0 +1,127 @@
+{% extends "SVDSystem/base.html" %} {% block title %}
+<title>Homepage</title>
+{% endblock %} {% block style %}
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("https://dl-file.cyberlink.com/web/upload-file/faceMe/20230424032546241_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .user_card {
+    width: 600px;
+    height: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+
+  .form_container {
+    margin-top: 20px;
+  }
+
+  #form-title {
+    color: black;
+  }
+
+  .login_btn {
+    width: 100%;
+    background: #33ccff !important;
+    color: white !important;
+  }
+  .login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+  .login_container {
+    padding: 0 2rem;
+  }
+  .input-group-text {
+    background: #f7ba5b !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+  }
+  .input_user,
+  .input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <img
+          style="height: 200px; width: 200px; margin: auto; padding: 20px"
+          src="https://cdn-icons-png.flaticon.com/512/9210/9210783.png"
+          alt=""
+        />
+        <hr />
+      </div>
+      <div class="d-flex justify-content-center">
+        <h3 id="form-title">Login as:</h3>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <a
+          class="btn btn-outline-primary"
+          style="width: 80%; margin: 10px"
+          href="/admin"
+          >Admin</a
+        >
+        <br />
+        <a
+          class="btn btn-outline-primary"
+          style="width: 80%; margin: 10px"
+          href="/accounts/login"
+          >User</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+<div
+  class="container text-center shadow-lg mt-5 pt-5 col-12 col-md-8 col-lg-6 col-xl-5 rounded"
+  style="border: 2px solid black; background-color: white"
+>
+  <div class="row">
+    <img
+      style="height: 200px; width: 200px; margin: auto; padding: 20px"
+      src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRaNQ8Ii7z34SoaA_la3vYZQTFPiiUBI2onw4HG4Kqv3F2lRiE9"
+      alt=""
+    />
+  </div>
+  <hr />
+  <h3>Login as:</h3>
+  <a
+    class="btn btn-outline-primary"
+    style="width: 80%; margin: 10px"
+    href="/admin"
+    >Admin</a
+  >
+  <br />
+  <a
+    class="btn btn-outline-primary"
+    style="width: 80%; margin: 10px"
+    href="/accounts/login"
+    >User</a
+  >
+</div>
+{% endcomment %} {% endblock %}
