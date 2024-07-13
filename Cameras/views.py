@@ -6,7 +6,7 @@ from django.template import loader
 from django.core.paginator import Paginator
 from .models import *
 from .forms import *
-from .utils import *
+from utils.get_flow import get_flow
 import cv2
 import os
 import time
